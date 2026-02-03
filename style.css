@@ -1486,6 +1486,78 @@ body {
     .btn-secondary {
         width: 100%;
     }
+
+    /* Mobile optimizations */
+    .container {
+        padding: 0 15px;
+    }
+
+    section {
+        padding: 40px 0 !important;
+    }
+
+    .hero {
+        padding: 60px 0 40px 0 !important;
+        min-height: auto !important;
+    }
+
+    .hero-content {
+        gap: 20px;
+    }
+
+    .hero-title {
+        font-size: 32px !important;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 28px !important;
+        margin-bottom: 15px;
+    }
+
+    .section-description {
+        font-size: 14px;
+    }
+
+    .service-card,
+    .benefit-card,
+    .testimonial-card,
+    .faq-item {
+        padding: 20px !important;
+    }
+
+    .benefits-grid,
+    .testimonials-grid {
+        gap: 15px !important;
+    }
+
+    .faq-container {
+        gap: 15px !important;
+    }
+
+    .contact-form-wrapper {
+        padding: 25px 15px !important;
+    }
+
+    .contact-content {
+        gap: 30px !important;
+    }
+
+    .tech-grid {
+        gap: 15px !important;
+    }
+
+    .process-step {
+        padding: 20px !important;
+    }
+
+    .portfolio-card {
+        padding: 0 !important;
+    }
 }
 
 / *   C o n t a c t   S e c t i o n   * / 
