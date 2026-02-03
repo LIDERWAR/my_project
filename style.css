@@ -1558,6 +1558,30 @@ body {
     .portfolio-card {
         padding: 0 !important;
     }
+
+    /* FAQ Mobile Fixes */
+    .faq-item {
+        height: 180px;
+    }
+
+    .faq-card-front,
+    .faq-card-back {
+        padding: 20px 15px !important;
+    }
+
+    .faq-question-text {
+        font-size: 15px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .faq-answer-text {
+        font-size: 13px !important;
+        line-height: 1.6 !important;
+    }
+
+    .faq-flip-hint {
+        font-size: 11px !important;
+    }
 }
 
 / *   C o n t a c t   S e c t i o n   * / 
