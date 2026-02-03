@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-SPACE - Orbit The Earth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="stars"></canvas>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 5L25 15H15L20 5Z" fill="white" />
+                        <path d="M20 35L15 25H25L20 35Z" fill="white" />
+                        <circle cx="20" cy="20" r="8" stroke="white" stroke-width="2" fill="none" />
+                    </svg>
+                    <span>A-SPACE</span>
+                </div>
+                <nav class="nav">
+                    <a href="#about">About</a>
+                    <a href="#technology">Technology</a>
+                    <a href="#galaxy">Galaxy</a>
+                    <a href="#satellite">Satellite</a>
+                    <button class="nav-btn">Aqua Safman</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <h1 class="hero-title">ФУЛСТЕК<br>ВЕБ-РАЗРАБОТЧИК</h1>
+                    <p class="hero-text">Разрабатываю современные веб-решения: от landing page до сложных
+                        веб-приложений.
+                        Работаю напрямую с клиентами без посредников. Fullstack разработка с использованием
+                        современных технологий и соблюдением всех сроков.</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary">Обсудить проект</button>
+                        <button class="btn-secondary">Рассчитать стоимость</button>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="earth-container">
+                        <img src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=800&h=800&fit=crop"
+                            alt="Earth" class="earth-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="section-label">— О РАЗРАБОТЧИКЕ</p>
+                    <h2 class="section-title">FULLSTACK РАЗРАБОТКА</h2>
+                    <p class="about-description">
+                        Создаю современные веб-решения полного цикла — от идеи до запуска.
+                        Специализируюсь на разработке landing page, корпоративных сайтов и сложных веб-приложений.
+                    </p>
+                    <p class="about-description">
+                        <strong>Работаю напрямую с клиентами без посредников</strong> — это позволяет снизить стоимость
+                        и ускорить процесс разработки. Гарантирую качество кода, соблюдение сроков и поддержку после
+                        запуска.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">Лет опыта</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="50">0</div>
+                        <div class="stat-label">Проектов</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="40">0</div>
+                        <div class="stat-label">Клиентов</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="services-header">
+                <p class="section-label">— МОИ УСЛУГИ</p>
+                <h2 class="section-title">ЧТО Я РАЗРАБАТЫВАЮ</h2>
+            </div>
+            <div class="service-cards">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="15" y="20" width="50" height="40" rx="2" stroke="#4A9EFF" stroke-width="2"
+                                fill="none" />
+                            <path d="M25 30 L35 40 L30 45 L25 40 L30 35 Z" fill="#4A9EFF" opacity="0.5" />
+                            <line x1="40" y1="32" x2="55" y2="32" stroke="#4A9EFF" stroke-width="2" />
+                            <line x1="40" y1="40" x2="55" y2="40" stroke="#4A9EFF" stroke-width="2" />
+                            <line x1="40" y1="48" x2="50" y2="48" stroke="#4A9EFF" stroke-width="2" />
+                            <circle cx="40" cy="50" r="8" stroke="#4A9EFF" stroke-width="2" fill="none" opacity="0.3" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">LANDING PAGE</h3>
+                    <p class="service-desc">Продающие одностраничники с высокой конверсией для привлечения клиентов и
+                        увеличения продаж</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="20" y="15" width="40" height="50" rx="2" stroke="#4A9EFF" stroke-width="2"
+                                fill="none" />
+                            <line x1="20" y1="25" x2="60" y2="25" stroke="#4A9EFF" stroke-width="2" />
+                            <circle cx="26" cy="20" r="1.5" fill="#4A9EFF" />
+                            <circle cx="32" cy="20" r="1.5" fill="#4A9EFF" />
+                            <circle cx="38" cy="20" r="1.5" fill="#4A9EFF" />
+                            <rect x="28" y="32" width="24" height="3" fill="#4A9EFF" opacity="0.5" />
+                            <rect x="28" y="38" width="24" height="3" fill="#4A9EFF" opacity="0.5" />
+                            <rect x="28" y="44" width="16" height="3" fill="#4A9EFF" opacity="0.5" />
+                            <rect x="28" y="52" width="12" height="8" stroke="#4A9EFF" stroke-width="1.5" fill="none" />
+                            <rect x="44" y="52" width="8" height="8" stroke="#4A9EFF" stroke-width="1.5" fill="none" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">КОРПОРАТИВНЫЕ САЙТЫ</h3>
+                    <p class="service-desc">Многостраничные решения для бизнеса с удобной навигацией и профессиональным
+                        дизайном</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="40" cy="40" r="22" stroke="#4A9EFF" stroke-width="2" fill="none" />
+                            <circle cx="40" cy="40" r="4" fill="#4A9EFF" />
+                            <line x1="40" y1="18" x2="40" y2="28" stroke="#4A9EFF" stroke-width="2" />
+                            <line x1="40" y1="52" x2="40" y2="62" stroke="#4A9EFF" stroke-width="2" />
+                            <line x1="18" y1="40" x2="28" y2="40" stroke="#4A9EFF" stroke-width="2" />
+                            <line x1="52" y1="40" x2="62" y2="40" stroke="#4A9EFF" stroke-width="2" />
+                            <path d="M40 28 C46 28 50 32 50 40 C50 48 46 52 40 52" stroke="#4A9EFF" stroke-width="2"
+                                fill="none" opacity="0.5" />
+                            <path d="M40 28 C34 28 30 32 30 40 C30 48 34 52 40 52" stroke="#4A9EFF" stroke-width="2"
+                                fill="none" opacity="0.5" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">ВЕБ-ПРИЛОЖЕНИЯ</h3>
+                    <p class="service-desc">Сложные интерактивные системы с продвинутым функционалом и интеграцией API
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="18" y="22" width="44" height="36" rx="2" stroke="#4A9EFF" stroke-width="2"
+                                fill="none" />
+                            <path d="M25 35 L30 30 L35 35 L30 40 Z" fill="#4A9EFF" opacity="0.3" />
+                            <path d="M30 40 L35 35 L40 40 L35 45 Z" fill="#4A9EFF" opacity="0.5" />
+                            <circle cx="50" cy="35" r="3" fill="#4A9EFF" opacity="0.5" />
+                            <circle cx="55" cy="42" r="2" fill="#4A9EFF" opacity="0.3" />
+                            <path d="M35 45 L40 50 L45 45" stroke="#4A9EFF" stroke-width="2" fill="none" />
+                            <path d="M22 32 L28 32" stroke="#4A9EFF" stroke-width="1.5" />
+                            <path d="M22 38 L26 38" stroke="#4A9EFF" stroke-width="1.5" />
+                            <rect x="48" y="48" width="10" height="6" rx="1" fill="#4A9EFF" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">РЕДИЗАЙН САЙТОВ</h3>
+                    <p class="service-desc">Обновление существующих проектов, улучшение UI/UX и оптимизация
+                        производительности</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="technologies">
+        <div class="container">
+            <div class="technologies-header">
+                <p class="section-label">— ЧЕМ Я ВЛАДЕЮ</p>
+                <h2 class="section-title">ТЕХНОЛОГИИ</h2>
+            </div>
+
+            <div class="tech-category">
+                <h3 class="tech-category-title">Frontend</h3>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10L15 45L30 50L45 45L50 10H10Z" stroke="#4A9EFF" stroke-width="2"
+                                    fill="rgba(74, 158, 255, 0.1)" />
+                                <path d="M30 15V45M20 25H40M22 35H38" stroke="#4A9EFF" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <span class="tech-name">HTML5</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10L15 45L30 50L45 45L50 10H10Z" stroke="#4A9EFF" stroke-width="2"
+                                    fill="rgba(74, 158, 255, 0.1)" />
+                                <text x="30" y="35" text-anchor="middle" fill="#4A9EFF" font-size="20"
+                                    font-weight="bold">3</text>
+                            </svg>
+                        </div>
+                        <span class="tech-name">CSS3</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="10" y="10" width="40" height="40" rx="4" stroke="#4A9EFF" stroke-width="2"
+                                    fill="rgba(74, 158, 255, 0.1)" />
+                                <text x="30" y="38" text-anchor="middle" fill="#4A9EFF" font-size="22"
+                                    font-weight="bold">JS</text>
+                            </svg>
+                        </div>
+                        <span class="tech-name">JavaScript</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="20" stroke="#4A9EFF" stroke-width="2" fill="none" />
+                                <path d="M30 10C30 10 40 20 40 30C40 40 30 50 30 50" stroke="#4A9EFF" stroke-width="2"
+                                    fill="none" />
+                                <path d="M30 10C30 10 20 20 20 30C20 40 30 50 30 50" stroke="#4A9EFF" stroke-width="2"
+                                    fill="none" />
+                                <circle cx="30" cy="30" r="4" fill="#4A9EFF" />
+                            </svg>
+                        </div>
+                        <span class="tech-name">React</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M30 10L45 25L40 45L20 45L15 25Z" stroke="#4A9EFF" stroke-width="2"
+                                    fill="rgba(74, 158, 255, 0.1)" />
+                                <text x="30" y="35" text-anchor="middle" fill="#4A9EFF" font-size="18"
+                                    font-weight="bold">V</text>
+                            </svg>
+                        </div>
+                        <span class="tech-name">Vue.js</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-category">
+                <h3 class="tech-category-title">Backend</h3>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 30L30 20L45 30L30 40Z" stroke="#4A9EFF" stroke-width="2"
+                                    fill="rgba(74, 158, 255, 0.1)" />
+                                <path d="M20 28L30 35L40 28" stroke="#4A9EFF" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <span class="tech-name">Node.js</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <ellipse cx="30" cy="30" rx="20" ry="12" stroke="#4A9EFF" stroke-width="2"
+                                    fill="rgba(74, 158, 255, 0.1)" />
+                                <path d="M10 30C10 30 15 38 30 38C45 38 50 30 50 30" stroke="#4A9EFF"
+                                    stroke-width="2" />
+                            </svg>
+                        </div>
+                        <span class="tech-name">PHP</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="25" cy="25" r="8" stroke="#4A9EFF" stroke-width="2"
+                                    fill="rgba(74, 158, 255, 0.1)" />
+                                <circle cx="35" cy="35" r="8" stroke="#4A9EFF" stroke-width="2"
+                                    fill="rgba(74, 158, 255, 0.1)" />
+                                <path d="M30 18L35 28M25 32L30 42" stroke="#4A9EFF" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <span class="tech-name">Python</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-category">
+                <h3 class="tech-category-title">CMS</h3>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="20" stroke="#4A9EFF" stroke-width="2"
+                                    fill="rgba(74, 158, 255, 0.1)" />
+                                <text x="30" y="36" text-anchor="middle" fill="#4A9EFF" font-size="18"
+                                    font-weight="bold">W</text>
+                            </svg>
+                        </div>
+                        <span class="tech-name">WordPress</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-category">
+                <h3 class="tech-category-title">Инструменты</h3>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 25L25 15L30 20L20 30L15 25Z" stroke="#4A9EFF" stroke-width="2"
+                                    fill="rgba(74, 158, 255, 0.1)" />
+                                <path d="M30 20L45 35L40 40L25 25L30 20Z" stroke="#4A9EFF" stroke-width="2"
+                                    fill="rgba(74, 158, 255, 0.1)" />
+                                <circle cx="22" cy="22" r="2" fill="#4A9EFF" />
+                                <circle cx="38" cy="38" r="2" fill="#4A9EFF" />
+                            </svg>
+                        </div>
+                        <span class="tech-name">Git</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="15" y="15" width="30" height="30" rx="2" stroke="#4A9EFF" stroke-width="2"
+                                    fill="rgba(74, 158, 255, 0.1)" />
+                                <circle cx="25" cy="25" r="4" stroke="#4A9EFF" stroke-width="2" />
+                                <rect x="32" y="32" width="8" height="8" stroke="#4A9EFF" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <span class="tech-name">Figma</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="12" y="12" width="36" height="36" rx="4" stroke="#4A9EFF" stroke-width="2"
+                                    fill="rgba(74, 158, 255, 0.1)" />
+                                <text x="30" y="36" text-anchor="middle" fill="#4A9EFF" font-size="18"
+                                    font-weight="bold">Ps</text>
+                            </svg>
+                        </div>
+                        <span class="tech-name">Photoshop</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process">
+        <div class="container">
+            <div class="process-header">
+                <p class="section-label">— КАК Я РАБОТАЮ</p>
+                <h2 class="section-title">ПРОЦЕСС РАБОТЫ</h2>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="15" width="30" height="25" rx="2" stroke="#4A9EFF" stroke-width="2"
+                                fill="none" />
+                            <line x1="15" y1="22" x2="25" y2="22" stroke="#4A9EFF" stroke-width="2" />
+                            <line x1="15" y1="28" x2="35" y2="28" stroke="#4A9EFF" stroke-width="2" />
+                            <line x1="15" y1="34" x2="30" y2="34" stroke="#4A9EFF" stroke-width="2" />
+                            <circle cx="35" cy="15" r="3" fill="#4A9EFF" />
+                        </svg>
+                    </div>
+                    <h3 class="step-title">Бриф и анализ</h3>
+                    <p class="step-desc">Изучаю задачу и цели вашего проекта, анализирую целевую аудиторию и конкурентов
+                    </p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="12" width="34" height="26" rx="2" stroke="#4A9EFF" stroke-width="2"
+                                fill="none" />
+                            <rect x="14" y="18" width="10" height="8" stroke="#4A9EFF" stroke-width="1.5"
+                                fill="rgba(74, 158, 255, 0.2)" />
+                            <rect x="26" y="18" width="10" height="8" stroke="#4A9EFF" stroke-width="1.5"
+                                fill="rgba(74, 158, 255, 0.2)" />
+                            <line x1="14" y1="30" x2="24" y2="30" stroke="#4A9EFF" stroke-width="1.5" />
+                            <line x1="26" y1="30" x2="36" y2="30" stroke="#4A9EFF" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <h3 class="step-title">Прототип и дизайн</h3>
+                    <p class="step-desc">Создаю макет с продуманной структурой и современным визуальным оформлением</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="10" width="30" height="30" rx="2" stroke="#4A9EFF" stroke-width="2"
+                                fill="none" />
+                            <path d="M18 20L22 25L18 30" stroke="#4A9EFF" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <line x1="26" y1="29" x2="34" y2="29" stroke="#4A9EFF" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="step-title">Разработка</h3>
+                    <p class="step-desc">Программирую весь функционал с чистым кодом и современными технологиями</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-icon">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="25" cy="25" r="12" stroke="#4A9EFF" stroke-width="2" fill="none" />
+                            <path d="M20 25L23 28L30 21" stroke="#4A9EFF" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="25" cy="25" r="8" stroke="#4A9EFF" stroke-width="1" fill="none" opacity="0.3" />
+                        </svg>
+                    </div>
+                    <h3 class="step-title">Тестирование</h3>
+                    <p class="step-desc">Проверяю работу на всех устройствах и браузерах, исправляю ошибки</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">05</div>
+                    <div class="step-icon">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25 10L28 20L38 22L30 30L32 40L25 35L18 40L20 30L12 22L22 20Z" stroke="#4A9EFF"
+                                stroke-width="2" fill="rgba(74, 158, 255, 0.2)" />
+                            <circle cx="25" cy="25" r="3" fill="#4A9EFF" />
+                        </svg>
+                    </div>
+                    <h3 class="step-title">Запуск и поддержка</h3>
+                    <p class="step-desc">Выгружаю проект на сервер и помогаю с любыми вопросами после запуска</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <div class="container">
+            <div class="portfolio-header">
+                <p class="section-label">— МОИ РАБОТЫ</p>
+                <h2 class="section-title">ПОРТФОЛИО</h2>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
+                            alt="E-commerce проект">
+                        <div class="portfolio-overlay">
+                            <button class="btn-view-project">Смотреть проект</button>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Интернет-магазин электроники</h3>
+                        <p class="portfolio-desc">Landing page с каталогом товаров, корзиной и интеграцией платежной
+                            системы</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
+                            alt="Корпоративный сайт">
+                        <div class="portfolio-overlay">
+                            <button class="btn-view-project">Смотреть проект</button>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Корпоративный сайт IT-компании</h3>
+                        <p class="portfolio-desc">Многостраничный сайт с блогом, формами обратной связи и личным
+                            кабинетом</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">CSS3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop"
+                            alt="Веб-приложение">
+                        <div class="portfolio-overlay">
+                            <button class="btn-view-project">Смотреть проект</button>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">CRM система для отдела продаж</h3>
+                        <p class="portfolio-desc">Веб-приложение для управления клиентами с дашбордом и аналитикой</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?w=600&h=400&fit=crop"
+                            alt="Landing Page">
+                        <div class="portfolio-overlay">
+                            <button class="btn-view-project">Смотреть проект</button>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Landing для онлайн-школы</h3>
+                        <p class="portfolio-desc">Продающий лендинг с анимациями, формой регистрации и отзывами клиентов
+                        </p>
+                        <div class="portfolio-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop"
+                            alt="Редизайн сайта">
+                        <div class="portfolio-overlay">
+                            <button class="btn-view-project">Смотреть проект</button>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Редизайн сайта финансовой компании</h3>
+                        <p class="portfolio-desc">Обновление UI/UX, оптимизация скорости загрузки и мобильной версии</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Figma</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop"
+                            alt="Мобильное приложение">
+                        <div class="portfolio-overlay">
+                            <button class="btn-view-project">Смотреть проект</button>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Платформа бронирования услуг</h3>
+                        <p class="portfolio-desc">Веб-приложение с календарем, онлайн-оплатой и уведомлениями</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="calculator">
+        <div class="container">
+            <div class="calculator-header">
+                <p class="section-label">— РАССЧИТАЙТЕ СТОИМОСТЬ</p>
+                <h2 class="section-title">КАЛЬКУЛЯТОР ПРОЕКТА</h2>
+            </div>
+            <div class="calculator-content">
+                <div class="calculator-form">
+                    <div class="calc-group">
+                        <label class="calc-label">Тип проекта</label>
+                        <div class="calc-options">
+                            <label class="calc-radio">
+                                <input type="radio" name="projectType" value="landing" data-price="30000" checked>
+                                <span class="radio-label">Landing Page</span>
+                            </label>
+                            <label class="calc-radio">
+                                <input type="radio" name="projectType" value="corporate" data-price="80000">
+                                <span class="radio-label">Корпоративный сайт</span>
+                            </label>
+                            <label class="calc-radio">
+                                <input type="radio" name="projectType" value="webapp" data-price="150000">
+                                <span class="radio-label">Веб-приложение</span>
+                            </label>
+                            <label class="calc-radio">
+                                <input type="radio" name="projectType" value="redesign" data-price="50000">
+                                <span class="radio-label">Редизайн</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="calc-group">
+                        <label class="calc-label">Количество страниц</label>
+                        <select name="pageCount" class="calc-select">
+                            <option value="1" data-price="0">1-5 страниц</option>
+                            <option value="2" data-price="20000">6-10 страниц</option>
+                            <option value="3" data-price="40000">10+ страниц</option>
+                        </select>
+                    </div>
+
+                    <div class="calc-group">
+                        <label class="calc-label">Дизайн</label>
+                        <select name="designType" class="calc-select">
+                            <option value="template" data-price="0">Шаблонный</option>
+                            <option value="unique" data-price="30000">Уникальный</option>
+                        </select>
+                    </div>
+
+                    <div class="calc-group">
+                        <label class="calc-label">Дополнительные опции</label>
+                        <div class="calc-checkboxes">
+                            <label class="calc-checkbox">
+                                <input type="checkbox" name="contactForms" data-price="10000">
+                                <span class="checkbox-label">Формы обратной связи</span>
+                            </label>
+                            <label class="calc-checkbox">
+                                <input type="checkbox" name="adminPanel" data-price="40000">
+                                <span class="checkbox-label">Админ-панель</span>
+                            </label>
+                            <label class="calc-checkbox">
+                                <input type="checkbox" name="apiIntegration" data-price="25000">
+                                <span class="checkbox-label">API интеграции</span>
+                            </label>
+                            <label class="calc-checkbox">
+                                <input type="checkbox" name="animations" data-price="15000">
+                                <span class="checkbox-label">Анимации</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculator-result">
+                    <div class="result-card">
+                        <div class="result-label">Примерная стоимость</div>
+                        <div class="result-price" id="calculatedPrice">30 000 ₽</div>
+                        <div class="result-note">* Итоговая стоимость определяется после детального обсуждения проекта
+                        </div>
+                        <button class="btn-primary btn-get-quote">Получить точный расчет</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-header">
+                <p class="section-label">— ПОЧЕМУ ВЫБИРАЮТ МЕНЯ</p>
+                <h2 class="section-title">ПРЕИМУЩЕСТВА</h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="30" cy="25" r="8" stroke="#4A9EFF" stroke-width="2" fill="none" />
+                            <path d="M18 45C18 38 23 33 30 33C37 33 42 38 42 45" stroke="#4A9EFF" stroke-width="2" />
+                            <path d="M15 25L20 30L15 35" stroke="#4A9EFF" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M45 25L40 30L45 35" stroke="#4A9EFF" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Прямая работа без агентств</h3>
+                    <p class="benefit-desc">Экономия бюджета и прямая коммуникация без посредников</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="15" y="18" width="30" height="24" rx="2" stroke="#4A9EFF" stroke-width="2"
+                                fill="none" />
+                            <path d="M20 28L25 33L35 23" stroke="#4A9EFF" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="40" cy="35" r="3" stroke="#4A9EFF" stroke-width="2"
+                                fill="rgba(74, 158, 255, 0.2)" />
+                            <path d="M25 15V18M35 15V18" stroke="#4A9EFF" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Fullstack разработка</h3>
+                    <p class="benefit-desc">Полный цикл создания проекта от дизайна до запуска</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="30" cy="30" r="15" stroke="#4A9EFF" stroke-width="2" fill="none" />
+                            <path d="M30 20V30L37 37" stroke="#4A9EFF" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="30" cy="30" r="2" fill="#4A9EFF" />
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Соблюдение сроков</h3>
+                    <p class="benefit-desc">Четкое планирование и своевременная сдача проекта</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30 15L35 25L45 27L37 35L39 45L30 40L21 45L23 35L15 27L25 25Z" stroke="#4A9EFF"
+                                stroke-width="2" fill="rgba(74, 158, 255, 0.1)" />
+                            <circle cx="30" cy="30" r="5" fill="#4A9EFF" />
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Современные технологии</h3>
+                    <p class="benefit-desc">Использование актуального стека технологий и best practices</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25 20L30 15L35 20M30 15V35" stroke="#4A9EFF" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <rect x="18" y="35" width="24" height="10" rx="2" stroke="#4A9EFF" stroke-width="2"
+                                fill="rgba(74, 158, 255, 0.1)" />
+                            <line x1="22" y1="40" x2="38" y2="40" stroke="#4A9EFF" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Поддержка после запуска</h3>
+                    <p class="benefit-desc">Помощь с любыми вопросами и доработками после релиза</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30 15C30 15 20 20 20 30C20 40 30 45 30 45C30 45 40 40 40 30C40 20 30 15 30 15Z"
+                                stroke="#4A9EFF" stroke-width="2" fill="rgba(74, 158, 255, 0.1)" />
+                            <circle cx="30" cy="30" r="6" stroke="#4A9EFF" stroke-width="2" fill="none" />
+                            <circle cx="30" cy="30" r="2" fill="#4A9EFF" />
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Индивидуальный подход</h3>
+                    <p class="benefit-desc">Учет всех особенностей вашего бизнеса и пожеланий</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <div class="testimonials-header">
+                <p class="section-label">— ЧТО ГОВОРЯТ КЛИЕНТЫ</p>
+                <h2 class="section-title">ОТЗЫВЫ</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-card-inner">
+                        <div class="testimonial-card-front">
+                            <div class="testimonial-avatar">
+                                <span>АС</span>
+                            </div>
+                            <div class="testimonial-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <div class="testimonial-author">
+                                <p class="author-name">Александр Смирнов</p>
+                                <p class="author-position">Основатель IT-стартапа</p>
+                            </div>
+                            <p class="flip-hint">Наведите для отзыва</p>
+                        </div>
+                        <div class="testimonial-card-back">
+                            <p class="testimonial-text">"Отличная работа! Сайт получился именно таким, как я хотел. Все
+                                сроки соблюдены, коммуникация на высшем уровне. Рекомендую!"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-card-inner">
+                        <div class="testimonial-card-front">
+                            <div class="testimonial-avatar">
+                                <span>МК</span>
+                            </div>
+                            <div class="testimonial-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <div class="testimonial-author">
+                                <p class="author-name">Мария Кузнецова</p>
+                                <p class="author-position">Директор маркетингового агентства</p>
+                            </div>
+                            <p class="flip-hint">Наведите для отзыва</p>
+                        </div>
+                        <div class="testimonial-card-back">
+                            <p class="testimonial-text">"Профессиональный подход к делу. Разработал корпоративный сайт с
+                                нуля, учёл все наши пожелания. Очень доволен результатом!"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-card-inner">
+                        <div class="testimonial-card-front">
+                            <div class="testimonial-avatar">
+                                <span>ДП</span>
+                            </div>
+                            <div class="testimonial-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <div class="testimonial-author">
+                                <p class="author-name">Дмитрий Петров</p>
+                                <p class="author-position">Онлайн-преподаватель</p>
+                            </div>
+                            <p class="flip-hint">Наведите для отзыва</p>
+                        </div>
+                        <div class="testimonial-card-back">
+                            <p class="testimonial-text">"Сделал landing для моего онлайн-курса за 2 недели. Дизайн
+                                современный, всё работает быстро. Конверсия выросла в 2 раза!"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-card-inner">
+                        <div class="testimonial-card-front">
+                            <div class="testimonial-avatar">
+                                <span>ЕВ</span>
+                            </div>
+                            <div class="testimonial-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <div class="testimonial-author">
+                                <p class="author-name">Елена Волкова</p>
+                                <p class="author-position">Руководитель отдела продаж</p>
+                            </div>
+                            <p class="flip-hint">Наведите для отзыва</p>
+                        </div>
+                        <div class="testimonial-card-back">
+                            <p class="testimonial-text">"Создал для нас CRM-систему с нуля. Всё интуитивно понятно,
+                                команда быстро освоила. Работаем уже полгода — без нареканий!"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-card-inner">
+                        <div class="testimonial-card-front">
+                            <div class="testimonial-avatar">
+                                <span>ИС</span>
+                            </div>
+                            <div class="testimonial-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <div class="testimonial-author">
+                                <p class="author-name">Игорь Соколов</p>
+                                <p class="author-position">Владелец интернет-магазина</p>
+                            </div>
+                            <p class="flip-hint">Наведите для отзыва</p>
+                        </div>
+                        <div class="testimonial-card-back">
+                            <p class="testimonial-text">"Обратился за редизайном старого сайта. Результат превзошёл
+                                ожидания — сайт стал современным, быстрым и удобным. Спасибо!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <div class="faq-header">
+                <p class="section-label">— ЧАСТЫЕ ВОПРОСЫ</p>
+                <h2 class="section-title">FAQ</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-card-inner">
+                        <div class="faq-card-front">
+                            <h3 class="faq-question-text">Сколько стоит разработка сайта?</h3>
+                            <p class="faq-flip-hint">Нажмите для ответа</p>
+                        </div>
+                        <div class="faq-card-back">
+                            <p class="faq-answer-text">Стоимость зависит от сложности проекта. Landing page от 30 000 ₽,
+                                корпоративный сайт от 80 000 ₽, веб-приложение от 150 000 ₽. Используйте калькулятор
+                                выше для примерного расчета. Точную цену определяем после обсуждения всех требований.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-card-inner">
+                        <div class="faq-card-front">
+                            <h3 class="faq-question-text">Сколько времени займет создание?</h3>
+                            <p class="faq-flip-hint">Нажмите для ответа</p>
+                        </div>
+                        <div class="faq-card-back">
+                            <p class="faq-answer-text">Сроки зависят от объема работ: Landing page — 1-2 недели,
+                                корпоративный сайт — 3-5 недель, веб-приложение — от 6 недель. В начале проекта
+                                составляем подробный план с конкретными датами для каждого этапа.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-card-inner">
+                        <div class="faq-card-front">
+                            <h3 class="faq-question-text">Нужен ли мне хостинг и домен?</h3>
+                            <p class="faq-flip-hint">Нажмите для ответа</p>
+                        </div>
+                        <div class="faq-card-back">
+                            <p class="faq-answer-text">Да, для запуска сайта необходим хостинг (сервер) и доменное имя
+                                (адрес сайта). Могу помочь с выбором и настройкой хостинга, либо вы можете предоставить
+                                свой. Также помогу с переносом сайта на ваш хостинг.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-card-inner">
+                        <div class="faq-card-front">
+                            <h3 class="faq-question-text">Будет ли сайт адаптирован под мобильные?</h3>
+                            <p class="faq-flip-hint">Нажмите для ответа</p>
+                        </div>
+                        <div class="faq-card-back">
+                            <p class="faq-answer-text">Да, все сайты создаются адаптивными (responsive design) и
+                                корректно отображаются на всех устройствах: смартфонах, планшетах, ноутбуках и
+                                десктопах. Перед сдачей тестирую на разных разрешениях экрана и браузерах.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-card-inner">
+                        <div class="faq-card-front">
+                            <h3 class="faq-question-text">Что входит в поддержку после запуска?</h3>
+                            <p class="faq-flip-hint">Нажмите для ответа</p>
+                        </div>
+                        <div class="faq-card-back">
+                            <p class="faq-answer-text">После запуска помогаю с исправлением возможных ошибок,
+                                консультирую по работе с сайтом, делаю небольшие правки контента. Для крупных доработок
+                                и добавления нового функционала обсуждаем отдельно.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-card-inner">
+                        <div class="faq-card-front">
+                            <h3 class="faq-question-text">Предоставляете ли исходный код?</h3>
+                            <p class="faq-flip-hint">Нажмите для ответа</p>
+                        </div>
+                        <div class="faq-card-back">
+                            <p class="faq-answer-text">Да, после полной оплаты вы получаете все исходные файлы проекта:
+                                HTML, CSS, JavaScript, изображения и другие ресурсы. Также предоставляю документацию по
+                                структуре проекта для дальнейшей работы с ним.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-card-inner">
+                        <div class="faq-card-front">
+                            <h3 class="faq-question-text">Можно ли внести изменения после запуска?</h3>
+                            <p class="faq-flip-hint">Нажмите для ответа</p>
+                        </div>
+                        <div class="faq-card-back">
+                            <p class="faq-answer-text">Конечно! Сайт можно дорабатывать и расширять в любой момент.
+                                Небольшие правки делаю в рамках поддержки, для крупных изменений (новые разделы,
+                                функционал) составляем отдельное техническое задание и оцениваем стоимость.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission">
+        <div class="container">
+            <div class="mission-content">
+                <div class="mission-left">
+                    <p class="mission-label">— OUR MISSION</p>
+                    <h2 class="mission-title">RAPIDSCAT</h2>
+                    <p class="mission-text">Improve weather forecasting on Earth, provide cross-calibration for all
+                        international satellites that monitor ocean winds, and improve estimates of how ocean winds
+                        change throughout the day, around the globe.</p>
+                    <button class="btn-primary">View All</button>
+                </div>
+                <div class="mission-right">
+                    <div class="mission-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1559589689-577aabd1db4f?w=600&h=400&fit=crop"
+                            alt="Space Station" class="mission-image">
+                        <div class="image-border"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="wave-divider">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0 C300,60 600,60 900,0 C1050,30 1200,30 1200,0 L1200,120 L0,120 Z"
+                fill="rgba(74, 158, 255, 0.1)" />
+            <path d="M0,20 C300,80 600,80 900,20 C1050,50 1200,50 1200,20 L1200,120 L0,120 Z"
+                fill="rgba(74, 158, 255, 0.05)" />
+        </svg>
+    </div>
+
+    <section class="satellite">
+        <div class="container">
+            <div class="satellite-content">
+                <div class="satellite-left">
+                    <div class="satellite-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=500&h=500&fit=crop"
+                            alt="Satellite" class="satellite-image">
+                        <div class="image-border"></div>
+                    </div>
+                </div>
+                <div class="satellite-right">
+                    <p class="satellite-label">— FUNCTION</p>
+                    <h2 class="satellite-title">SATELLITE</h2>
+                    <p class="satellite-text">Gives light at night. Affects the balance of sea water. Transmit
+                        television signals, cell phones, and the internet. Transmits and receives communication signals.
+                    </p>
+                    <div class="satellite-buttons">
+                        <button class="btn-primary">View All</button>
+                        <button class="btn-secondary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacts">
+        <div class="container">
+            <div class="contact-header">
+                <p class="section-label">— СВЯЖИТЕСЬ СО МНОЙ</p>
+                <h2 class="section-title">Контакты</h2>
+                <p class="section-description">Готов обсудить ваш проект и ответить на все вопросы</p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h3 class="form-title">Оставить заявку</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="contactName" class="form-input" placeholder="Ваше имя" required>
+                            <span class="form-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="tel" id="contactPhone" class="form-input" placeholder="+7 (XXX) XXX-XX-XX"
+                                required>
+                            <span class="form-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <select id="contactProjectType" class="form-input form-select" required>
+                                <option value="" disabled selected>Тип проекта</option>
+                                <option value="landing">Landing Page</option>
+                                <option value="corporate">Корпоративный сайт</option>
+                                <option value="ecommerce">Интернет-магазин</option>
+                                <option value="webapp">Веб-приложение</option>
+                                <option value="other">Другое</option>
+                            </select>
+                            <span class="form-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="contactMessage" class="form-input form-textarea" placeholder="Сообщение"
+                                rows="5" required></textarea>
+                            <span class="form-error"></span>
+                        </div>
+
+                        <button type="submit" class="btn-primary btn-submit">
+                            <span>Отправить заявку</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M17.5 2.5L8.75 11.25M17.5 2.5L11.875 17.5L8.75 11.25M17.5 2.5L2.5 8.125L8.75 11.25"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Direct Contact Buttons -->
+                <div class="contact-direct">
+                    <h3 class="form-title">Прямая связь</h3>
+                    <p class="direct-description">Выберите удобный способ связи</p>
+
+                    <div class="contact-buttons">
+                        <a href="tel:+79XXXXXXXXX" class="contact-btn contact-btn-phone">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Позвонить</span>
+                        </a>
+
+                        <a href="https://t.me/username" target="_blank" class="contact-btn contact-btn-telegram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M21.9998 4L11.2998 14.7M21.9998 4L14.9998 21L11.2998 14.7M21.9998 4L2.99976 11L11.2998 14.7"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Telegram</span>
+                        </a>
+
+                        <a href="https://wa.me/79XXXXXXXXX" target="_blank" class="contact-btn contact-btn-whatsapp">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                                    fill="currentColor" />
+                            </svg>
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M17.5 8.33333C17.5 14.1667 10 19.1667 10 19.1667C10 19.1667 2.5 14.1667 2.5 8.33333C2.5 6.34420 3.29018 4.43655 4.6967 3.03141C6.10322 1.62626 8.01088 0.833336 10 0.833336C11.9891 0.833336 13.8968 1.62626 15.3033 3.03141C16.7098 4.43655 17.5 6.34420 17.5 8.33333Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M10 10.8333C11.3807 10.8333 12.5 9.71405 12.5 8.33333C12.5 6.95262 11.3807 5.83333 10 5.83333C8.61929 5.83333 7.5 6.95262 7.5 8.33333C7.5 9.71405 8.61929 10.8333 10 10.8333Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Россия, работаю удаленно</span>
+                        </div>
+                        <div class="info-item">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M18.3333 14.1V16.6C18.3343 16.8321 18.2867 17.0618 18.1937 17.2745C18.1008 17.4871 17.9644 17.678 17.7934 17.8349C17.6224 17.9918 17.4205 18.1112 17.2006 18.1856C16.9808 18.26 16.7478 18.2876 16.5166 18.2667C13.9522 17.988 11.489 17.1117 9.32498 15.7083C7.31151 14.4289 5.60443 12.7218 4.32498 10.7083C2.91663 8.53437 2.04019 6.05916 1.76665 3.48334C1.74581 3.25289 1.77321 3.02069 1.84707 2.80138C1.92092 2.58207 2.03963 2.38056 2.19562 2.20972C2.35162 2.03888 2.54149 1.90218 2.75314 1.80869C2.9648 1.7152 3.1936 1.66692 3.42498 1.66667H5.92498C6.32941 1.6629 6.72148 1.80597 7.028 2.06966C7.33452 2.33334 7.53392 2.69954 7.59165 3.1C7.69998 3.90007 7.89289 4.68562 8.16665 5.44167C8.28096 5.73995 8.31044 6.06409 8.25194 6.37858C8.19344 6.69306 8.04927 6.98545 7.83748 7.225L6.79165 8.27084C7.97796 10.3681 9.63186 12.022 11.7291 13.2083L12.775 12.1625C13.0145 11.9507 13.3069 11.8066 13.6214 11.7481C13.9359 11.6896 14.26 11.719 14.5583 11.8333C15.3144 12.1071 16.0999 12.3 16.9 12.4083C17.3048 12.4666 17.6745 12.6696 17.9388 12.9813C18.203 13.2929 18.3435 13.6913 18.3333 14.1Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>+7 (XXX) XXX-XX-XX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2024 Fullstack Developer. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
