@@ -1582,6 +1582,17 @@ body {
     .faq-flip-hint {
         font-size: 11px !important;
     }
+
+    .faq-container {
+        max-width: 100%;
+        width: 100%;
+        gap: 12px !important;
+    }
+
+    .faq-card-front,
+    .faq-card-back {
+        overflow: hidden;
+    }
 }
 
 / *   C o n t a c t   S e c t i o n   * / 
