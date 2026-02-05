@@ -404,3 +404,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Active navigation on scroll
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav a');
+
+const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === entry.target.id) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+}, { threshold: 0.2 });
+
+sections.forEach(section => {
+    navObserver.observe(section);
+});

@@ -45,9 +45,16 @@ body {
 
 /* Header */
 .header {
-    padding: 20px 0;
-    position: relative;
-    z-index: 100;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
 }
 
 .header-content {
@@ -85,7 +92,8 @@ body {
     letter-spacing: 0.5px;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav a.active {
     color: var(--primary-blue);
 }
 
@@ -111,7 +119,7 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 60px 0 80px;
+    padding: 140px 0 80px;
     position: relative;
 }
 
