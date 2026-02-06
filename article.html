@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тренды веб-разработки 2024 - A-SPACE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="stars"></canvas>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 5L25 15H15L20 5Z" fill="white" />
+                        <path d="M20 35L15 25H25L20 35Z" fill="white" />
+                        <circle cx="20" cy="20" r="8" stroke="white" stroke-width="2" fill="none" />
+                    </svg>
+                    <span>A-SPACE</span>
+                </div>
+                <nav class="nav">
+                    <a href="index.html#about">О себе</a>
+                    <a href="index.html#services">Услуги</a>
+                    <a href="index.html#technologies">Технологии</a>
+                    <a href="index.html#process">Процесс</a>
+                    <a href="index.html#portfolio">Портфолио</a>
+                    <a href="blog.html" class="active">Блог</a>
+                    <a href="index.html#contacts">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="article-hero">
+        <div class="container">
+            <a href="blog.html" class="back-link">← Вернуться в блог</a>
+            <div class="article-header-content">
+                <div class="article-meta">
+                    <span class="blog-date">06.02.2024</span>
+                    <span class="blog-tag">Разработка</span>
+                </div>
+                <h1 class="article-title">Тренды веб-разработки 2024: Что учить новичку?</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="article-content-section">
+        <div class="container">
+            <div class="article-body">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=600&fit=crop" alt="Код"
+                    class="article-main-image">
+
+                <p class="lead-text">Мир веб-разработки меняется стремительно. То, что было стандартом вчера, сегодня
+                    уже считается "legacy". В этой статье я разберу основные технологии, на которые стоит обратить
+                    внимание в 2024 году.</p>
+
+                <h2>1. Искусственный интеллект в разработке</h2>
+                <p>AI-инструменты, такие как GitHub Copilot и ChatGPT, становятся неотъемлемой частью рабочего процесса
+                    разработчика. Они не заменят программистов, но значительно ускорят написание рутинного кода и поиск
+                    ошибок. Умение правильно формулировать запросы (промпт-инжиниринг) становится важным навыком.</p>
+
+                <h2>2. Serverless и Edge Computing</h2>
+                <p>Бессерверная архитектура продолжает набирать популярность. Платформы вроде Vercel и Cloudflare Pages
+                    позволяют деплоить приложения за секунды, автоматически масштабируясь под нагрузку. Логика
+                    приложений всё чаще переносится на "край" (Edge), ближе к пользователю, что обеспечивает мгновенную
+                    загрузку.</p>
+
+                <h2>3. React и его экосистема</h2>
+                <p>React остаётся королем фронтенда. Однако акцент смещается в сторону мета-фреймворков, таких как
+                    Next.js. Server Components (RSC) меняют подход к рендерингу, позволяя выполнять часть кода на
+                    сервере и отправлять клиенту меньше JavaScript.</p>
+
+                <blockquote>
+                    <p>"Лучший код — это тот, который не нужно писать. Использование готовых, проверенных временем
+                        решений позволяет сосредоточиться на бизнес-логике, а не на изобретении велосипедов."</p>
+                </blockquote>
+
+                <h2>4. TypeScript как стандарт</h2>
+                <p>Если вы всё еще пишете на чистом JavaScript, самое время переходить на TypeScript. Статическая
+                    типизация спасает от множества глупых ошибок и значительно упрощает поддержку кода в крупных
+                    проектах. Большинство современных библиотек пишутся на TS по умолчанию.</p>
+
+                <h2>5. Производительность и Core Web Vitals</h2>
+                <p>Google продолжает ужесточать требования к скорости загрузки сайтов. Оптимизация изображений (WebP,
+                    AVIF), ленивая загрузка (lazy loading) и минимизация CSS/JS — это уже не опция, а необходимость.</p>
+
+                <div class="article-conclusion">
+                    <h3>Заключение</h3>
+                    <p>Не пытайтесь выучить всё и сразу. Выберите одно направление (например, React + Next.js) и
+                        углубляйтесь в него. Фундаментальные знания (HTML, CSS, JS, алгоритмы) всегда будут важнее
+                        трендов.</p>
+                </div>
+
+                <div class="article-share">
+                    <p>Понравилась статья? Поделитесь ей:</p>
+                    <div class="share-buttons">
+                        <button class="btn-share">Telegram</button>
+                        <button class="btn-share">WhatsApp</button>
+                        <button class="btn-share">VK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2024 Fullstack Developer. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог - A-SPACE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="stars"></canvas>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 5L25 15H15L20 5Z" fill="white" />
+                        <path d="M20 35L15 25H25L20 35Z" fill="white" />
+                        <circle cx="20" cy="20" r="8" stroke="white" stroke-width="2" fill="none" />
+                    </svg>
+                    <span>A-SPACE</span>
+                </div>
+                <nav class="nav">
+                    <a href="index.html#about">О себе</a>
+                    <a href="index.html#services">Услуги</a>
+                    <a href="index.html#technologies">Технологии</a>
+                    <a href="index.html#process">Процесс</a>
+                    <a href="index.html#portfolio">Портфолио</a>
+                    <a href="blog.html" class="active">Блог</a>
+                    <a href="index.html#contacts">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="blog-hero">
+        <div class="container">
+            <h1 class="hero-title">БЛОГ</h1>
+            <p class="hero-text">Статьи о веб-разработке, технологиях и личном опыте</p>
+        </div>
+    </section>
+
+    <section class="blog-grid-section">
+        <div class="container">
+            <div class="blog-grid">
+                <!-- Blog Post 1 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop"
+                            alt="Код">
+                        <div class="blog-overlay">
+                            <a href="article.html" class="btn-primary">Читать статью</a>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">06.02.2024</span>
+                            <span class="blog-tag">Разработка</span>
+                        </div>
+                        <h3 class="blog-title">Тренды веб-разработки 2024: Что учить новичку?</h3>
+                        <p class="blog-excerpt">Обзор самых востребованных технологий и инструментов, которые будут
+                            актуальны в ближайший год. Разбираем Frontend, Backend и инструменты.</p>
+                        <a href="article.html" class="blog-link">Подробнее →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 (Placeholder) -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=600&h=400&fit=crop"
+                            alt="Дизайн">
+                        <div class="blog-overlay">
+                            <a href="#" class="btn-primary">Скоро</a>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">01.02.2024</span>
+                            <span class="blog-tag">Дизайн</span>
+                        </div>
+                        <h3 class="blog-title">Как создать удобный интерфейс: 5 правил UX</h3>
+                        <p class="blog-excerpt">Почему красивый дизайн не всегда удобен? Разбираем основные ошибки
+                            новичков и учимся делать интерфейсы для людей.</p>
+                        <a href="#" class="blog-link">Подробнее →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 (Placeholder) -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop"
+                            alt="Ноутбук">
+                        <div class="blog-overlay">
+                            <a href="#" class="btn-primary">Скоро</a>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">25.01.2024</span>
+                            <span class="blog-tag">Карьера</span>
+                        </div>
+                        <h3 class="blog-title">Фриланс или офис: плюсы и минусы</h3>
+                        <p class="blog-excerpt">Личный опыт работы на фрилансе и в студии. Что выбрать на старте карьеры
+                            и как не выгореть в первые полгода.</p>
+                        <a href="#" class="blog-link">Подробнее →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2024 Fullstack Developer. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
