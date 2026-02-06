@@ -184,16 +184,31 @@ body {
     justify-content: center;
 }
 
+/* Static shadow overlay to prevent rotation artifacts */
+.earth-container::after {
+    content: '';
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    box-shadow:
+        0 0 60px rgba(74, 158, 255, 0.4),
+        0 0 100px rgba(74, 158, 255, 0.2),
+        inset 0 0 60px rgba(0, 0, 0, 0.8);
+    background: transparent;
+    pointer-events: none;
+    z-index: 2;
+}
+
 .earth-image {
     width: 450px;
     height: 450px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow:
-        0 0 60px rgba(74, 158, 255, 0.4),
-        0 0 100px rgba(74, 158, 255, 0.2),
-        inset 0 0 60px rgba(0, 0, 0, 0.5);
+    /* Removed box-shadow from here to prevent rotating square artifact */
     animation: rotate 60s linear infinite;
+    position: relative;
+    z-index: 1;
 }
 
 @keyframes rotate {
