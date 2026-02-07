@@ -383,7 +383,7 @@ document.addEventListener('DOMContentLoaded', () => {
         messageInput.addEventListener('blur', validateMessage);
 
         // Form submission
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
             const isNameValid = validateName();
@@ -392,14 +392,54 @@ document.addEventListener('DOMContentLoaded', () => {
             const isMessageValid = validateMessage();
 
             if (isNameValid && isPhoneValid && isProjectTypeValid && isMessageValid) {
-                // Form is valid - you can send data to server here
-                alert('Спасибо за заявку! Мы свяжемся с вами в ближайшее время.');
-                contactForm.reset();
+                const submitBtn = contactForm.querySelector('.btn-submit');
+                const originalBtnText = submitBtn.innerHTML;
+                submitBtn.innerHTML = 'Отправка...';
+                submitBtn.disabled = true;
 
-                // Clear all errors
-                [nameInput, phoneInput, projectTypeInput, messageInput].forEach(input => {
-                    clearError(input);
-                });
+                // Telegram Configuration
+                // TODO: Replace with your actual Bot Token and Chat ID
+                const BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE';
+                const CHAT_ID = 'YOUR_CHAT_ID_HERE';
+                const URI_API = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+
+                let message = `<b>Заявка с сайта</b>\n`;
+                message += `<b>Имя:</b> ${nameInput.value}\n`;
+                message += `<b>Телефон:</b> ${phoneInput.value}\n`;
+                message += `<b>Тип проекта:</b> ${projectTypeInput.value}\n`;
+                message += `<b>Сообщение:</b> ${messageInput.value}`;
+
+                try {
+                    const response = await fetch(URI_API, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            chat_id: CHAT_ID,
+                            text: message,
+                            parse_mode: 'html'
+                        })
+                    });
+
+                    const result = await response.json();
+
+                    if (result.ok) {
+                        alert('Спасибо за заявку! Мы свяжемся с вами в ближайшее время.');
+                        contactForm.reset();
+                        [nameInput, phoneInput, projectTypeInput, messageInput].forEach(input => {
+                            clearError(input);
+                        });
+                    } else {
+                        throw new Error('Telegram API Error');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('Ошибка отправки. Пожалуйста, свяжитесь с нами другим способом.');
+                } finally {
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                }
             }
         });
     }
