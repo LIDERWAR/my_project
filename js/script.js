@@ -465,3 +465,45 @@ const navObserver = new IntersectionObserver((entries) => {
 sections.forEach(section => {
     navObserver.observe(section);
 });
+
+
+
+
+// Burger Menu functionality
+const burgerBtn = document.querySelector('.burger-btn');
+const nav = document.querySelector('.nav');
+
+if (burgerBtn && nav) {
+    burgerBtn.addEventListener('click', () => {
+        burgerBtn.classList.toggle('active');
+        nav.classList.toggle('active');
+        document.body.classList.toggle('no-scroll'); // Optional: prevent scrolling when menu is open
+    });
+}
+
+// Scroll Animation Observer for generic fade-up
+const fadeObserverOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+};
+
+const fadeObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Only animate once
+        }
+    });
+}, fadeObserverOptions);
+
+// Target elements to animate
+const elementsToAnimate = document.querySelectorAll(
+    '.section-title, .section-label, .service-item, .bento-item, .portfolio-item, .process-header'
+);
+
+elementsToAnimate.forEach((el, index) => {
+    el.classList.add('fade-up');
+    // Optional: Add staggering based on index or position? 
+    // Usually manual staggering is better, but let's just observe.
+    fadeObserver.observe(el);
+});
