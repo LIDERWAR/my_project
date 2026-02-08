@@ -865,6 +865,32 @@ body {
     border-color: var(--primary-blue);
 }
 
+.portfolio-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.tag {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Exo 2', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    border-color: var(--primary-blue);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+    background: rgba(74, 158, 255, 0.1);
+}
+
 /* Mobile Adaptation for Portfolio */
 @media (max-width: 992px) {
     .portfolio-list {
