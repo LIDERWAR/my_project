@@ -111,23 +111,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Earth glow effect on mouse move
-const earthImage = document.querySelector('.earth-image');
-if (earthImage) {
-    document.addEventListener('mousemove', (e) => {
-        const rect = earthImage.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
-        const distance = Math.sqrt(x * x + y * y);
+function initEarthInteraction() {
+    console.log("Earth interaction init started");
+    const earthImage = document.querySelector('.earth-image');
+    const container = document.querySelector('.earth-container');
 
-        if (distance < 250) {
-            const intensity = 1 - (distance / 250);
-            earthImage.style.filter = `brightness(${1 + intensity * 0.3}) drop-shadow(0 0 ${30 + intensity * 30}px rgba(74, 158, 255, ${0.4 + intensity * 0.3}))`;
-        } else {
+    if (earthImage && container) {
+        console.log("Earth elements found, attaching listeners");
+        container.addEventListener('mousemove', (e) => {
+            const rect = container.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+
+            // Calculate rotation angles
+            // Max rotation: 20 degrees based on feedback
+            const rotateY = (x / (rect.width / 2)) * 20;
+            const rotateX = -(y / (rect.height / 2)) * 20;
+
+            // Apply transform: Scale (1.2 requested) + Rotate
+            earthImage.style.transform = `scale(1.2) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+            // Add class to pause global rotation animation
+            earthImage.classList.add('interactive');
+
+            // Dynamic lighting effect
+            const distance = Math.sqrt(x * x + y * y);
+            if (distance < 250) {
+                const intensity = 1 - (distance / 250);
+                earthImage.style.filter = `brightness(${1 + intensity * 0.3}) drop-shadow(0 0 ${30 + intensity * 20}px rgba(74, 158, 255, ${0.5 + intensity * 0.2}))`;
+            }
+        });
+
+        container.addEventListener('mouseleave', () => {
+            // Reset transform to default
+            earthImage.style.transform = 'scale(1) rotateX(0) rotateY(0)';
+
+            // Remove interactive class
+            earthImage.classList.remove('interactive');
+
+            // Reset filter
             earthImage.style.filter = '';
-        }
-    });
+        });
+    }
 }
+
+document.addEventListener('DOMContentLoaded', initEarthInteraction);
 
 // Interactive button effects
 document.querySelectorAll('button').forEach(button => {
@@ -477,7 +505,29 @@ if (burgerBtn && nav) {
     burgerBtn.addEventListener('click', () => {
         burgerBtn.classList.toggle('active');
         nav.classList.toggle('active');
-        document.body.classList.toggle('no-scroll'); // Optional: prevent scrolling when menu is open
+        document.body.classList.toggle('no-scroll');
+    });
+
+    // Close menu when a link is clicked
+    const navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            burgerBtn.classList.remove('active');
+            nav.classList.remove('active');
+            document.body.classList.remove('no-scroll');
+        });
+    });
+
+    // Close menu when clicking outside (or on the overlay itself)
+    document.addEventListener('click', (e) => {
+        const isClickInsideMenu = nav.contains(e.target) && e.target !== nav;
+        const isClickOnBurger = burgerBtn.contains(e.target);
+
+        if (nav.classList.contains('active') && !isClickInsideMenu && !isClickOnBurger) {
+            burgerBtn.classList.remove('active');
+            nav.classList.remove('active');
+            document.body.classList.remove('no-scroll');
+        }
     });
 }
 
@@ -506,4 +556,28 @@ elementsToAnimate.forEach((el, index) => {
     // Optional: Add staggering based on index or position? 
     // Usually manual staggering is better, but let's just observe.
     fadeObserver.observe(el);
+});
+
+// Scroll Navigation Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollTopBtn = document.getElementById('scrollTop');
+    const scrollBottomBtn = document.getElementById('scrollBottom');
+
+    if (scrollTopBtn) {
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    if (scrollBottomBtn) {
+        scrollBottomBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        });
+    }
 });
