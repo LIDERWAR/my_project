@@ -49,72 +49,14 @@
         </div>
     </header>
 
-    <section class="blog-hero">
-        <div class="container">
-            <h1 class="hero-title">БЛОГ</h1>
-            <p class="hero-text">Статьи о веб-разработке, технологиях и личном опыте</p>
-        </div>
-    </section>
-
     <section class="blog-grid-section">
         <div class="container">
-            <div class="blog-grid">
-                <!-- Blog Post 1 -->
-                <article class="blog-card">
-                    <a href="article.html" class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop"
-                            alt="Код">
+            <div id="blog-grid" class="blog-grid">
+                <!-- Articles will be loaded here dynamically -->
+            </div>
 
-                    </a>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">06.02.2024</span>
-                            <span class="blog-tag">Разработка</span>
-                        </div>
-                        <h3 class="blog-title">Тренды веб-разработки 2024: Что учить новичку?</h3>
-                        <p class="blog-excerpt">Обзор самых востребованных технологий и инструментов, которые будут
-                            актуальны в ближайший год. Разбираем Frontend, Backend и инструменты.</p>
-                        <a href="article.html" class="blog-link">Подробнее →</a>
-                    </div>
-                </article>
-
-                <!-- Blog Post 2 (Placeholder) -->
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=600&h=400&fit=crop"
-                            alt="Дизайн">
-
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">01.02.2024</span>
-                            <span class="blog-tag">Дизайн</span>
-                        </div>
-                        <h3 class="blog-title">Как создать удобный интерфейс: 5 правил UX</h3>
-                        <p class="blog-excerpt">Почему красивый дизайн не всегда удобен? Разбираем основные ошибки
-                            новичков и учимся делать интерфейсы для людей.</p>
-                        <a href="#" class="blog-link">Подробнее →</a>
-                    </div>
-                </article>
-
-                <!-- Blog Post 3 (Placeholder) -->
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop"
-                            alt="Ноутбук">
-
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">25.01.2024</span>
-                            <span class="blog-tag">Карьера</span>
-                        </div>
-                        <h3 class="blog-title">Фриланс или офис: плюсы и минусы</h3>
-                        <p class="blog-excerpt">Личный опыт работы на фрилансе и в студии. Что выбрать на старте карьеры
-                            и как не выгореть в первые полгода.</p>
-                        <a href="#" class="blog-link">Подробнее →</a>
-                    </div>
-                </article>
+            <div id="pagination" class="pagination-container">
+                <!-- Pagination buttons will be loaded here -->
             </div>
         </div>
     </section>
@@ -140,6 +82,8 @@
         </button>
     </div>
 
+    <script src="js/blog-data.js"></script>
+    <script src="js/blog.js"></script>
     <script src="js/script.js"></script>
 </body>
 
