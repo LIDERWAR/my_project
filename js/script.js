@@ -1,4 +1,4 @@
-// Star field animation
+// Анимация звездного фона
 const canvas = document.getElementById('stars');
 const ctx = canvas.getContext('2d');
 
@@ -64,13 +64,13 @@ function animateStars() {
 initStars();
 animateStars();
 
-// Window resize handler
+// Обработчик изменения размера окна
 window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 });
 
-// Smooth scroll
+// Плавная прокрутка
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -84,7 +84,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Scroll animations
+// Анимации при прокрутке
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
@@ -99,7 +99,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Animate elements on scroll
+// Анимация элементов при появлении
 document.addEventListener('DOMContentLoaded', () => {
     const animateElements = document.querySelectorAll('.service-card, .mission-content, .satellite-content');
 
@@ -112,29 +112,29 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initEarthInteraction() {
-    console.log("Earth interaction init started");
+    console.log("Инициализация взаимодействия с Землей");
     const earthImage = document.querySelector('.earth-image');
     const container = document.querySelector('.earth-container');
 
     if (earthImage && container) {
-        console.log("Earth elements found, attaching listeners");
+        console.log("Элементы Земли найдены, добавляем слушатели");
         container.addEventListener('mousemove', (e) => {
             const rect = container.getBoundingClientRect();
             const x = e.clientX - rect.left - rect.width / 2;
             const y = e.clientY - rect.top - rect.height / 2;
 
-            // Calculate rotation angles
-            // Max rotation: 20 degrees based on feedback
+            // Вычисление углов поворота
+            // Максимальный поворот: 20 градусов
             const rotateY = (x / (rect.width / 2)) * 20;
             const rotateX = -(y / (rect.height / 2)) * 20;
 
-            // Apply transform: Scale (1.2 requested) + Rotate
+            // Применение трансформации: Масштаб (1.2) + Поворот
             earthImage.style.transform = `scale(1.2) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 
-            // Add class to pause global rotation animation
+            // Добавляем класс для паузы анимации вращения
             earthImage.classList.add('interactive');
 
-            // Dynamic lighting effect
+            // Эффект динамического освещения
             const distance = Math.sqrt(x * x + y * y);
             if (distance < 250) {
                 const intensity = 1 - (distance / 250);
@@ -143,13 +143,13 @@ function initEarthInteraction() {
         });
 
         container.addEventListener('mouseleave', () => {
-            // Reset transform to default
+            // Сброс трансформации к умолчанию
             earthImage.style.transform = 'scale(1) rotateX(0) rotateY(0)';
 
-            // Remove interactive class
+            // Удаление класса интерактивности
             earthImage.classList.remove('interactive');
 
-            // Reset filter
+            // Сброс фильтра
             earthImage.style.filter = '';
         });
     }
@@ -157,7 +157,7 @@ function initEarthInteraction() {
 
 document.addEventListener('DOMContentLoaded', initEarthInteraction);
 
-// Interactive button effects
+// Интерактивные эффекты кнопок
 document.querySelectorAll('button').forEach(button => {
     button.addEventListener('mouseenter', function () {
         this.style.transform = 'scale(1.05)';
@@ -168,7 +168,7 @@ document.querySelectorAll('button').forEach(button => {
     });
 });
 
-// Service cards hover effect
+// Эффект наведения на карточки услуг
 document.querySelectorAll('.service-card').forEach(card => {
     card.addEventListener('mouseenter', function () {
         const icon = this.querySelector('.service-icon svg');
@@ -186,7 +186,7 @@ document.querySelectorAll('.service-card').forEach(card => {
     });
 });
 
-// Parallax effect for sections
+// Эффект параллакса для секций
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const parallaxElements = document.querySelectorAll('.mission-image, .satellite-image');
@@ -197,7 +197,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Animated counters for stats
+// Анимированные счетчики статистики
 function animateCounter(element, target, duration = 2000) {
     let start = 0;
     const increment = target / (duration / 16);
@@ -228,54 +228,54 @@ document.addEventListener('DOMContentLoaded', () => {
         statsObserver.observe(card);
     });
 
-    // Calculator functionality
+    // Функционал калькулятора
     const calculatorInputs = document.querySelectorAll('input[name="projectType"], select[name="pageCount"], select[name="designType"], input[type="checkbox"]');
     const priceDisplay = document.getElementById('calculatedPrice');
 
     function calculatePrice() {
         let totalPrice = 0;
 
-        // Get selected project type
+        // Получение выбранного типа проекта
         const projectType = document.querySelector('input[name="projectType"]:checked');
         if (projectType) {
             totalPrice += parseInt(projectType.getAttribute('data-price'));
         }
 
-        // Get selected page count
+        // Получение количества страниц
         const pageCount = document.querySelector('select[name="pageCount"]');
         if (pageCount) {
             const selectedOption = pageCount.options[pageCount.selectedIndex];
             totalPrice += parseInt(selectedOption.getAttribute('data-price'));
         }
 
-        // Get selected design type
+        // Получение типа дизайна
         const designType = document.querySelector('select[name="designType"]');
         if (designType) {
             const selectedOption = designType.options[designType.selectedIndex];
             totalPrice += parseInt(selectedOption.getAttribute('data-price'));
         }
 
-        // Get checked additional options
+        // Получение выбранных дополнительных опций
         const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
         checkboxes.forEach(checkbox => {
             totalPrice += parseInt(checkbox.getAttribute('data-price'));
         });
 
-        // Format price with spaces
+        // Форматирование цены с пробелами
         const formattedPrice = totalPrice.toLocaleString('ru-RU');
         priceDisplay.textContent = `${formattedPrice} ₽`;
     }
 
-    // Add event listeners to all calculator inputs
+    // Слушатели событий для всех полей калькулятора
     calculatorInputs.forEach(input => {
         input.addEventListener('change', calculatePrice);
     });
 
-    // Scroll to contact form on button click
+    // Прокрутка к форме контактов при клике
     const getQuoteBtn = document.querySelector('.btn-get-quote');
     if (getQuoteBtn) {
         getQuoteBtn.addEventListener('click', () => {
-            // Scroll to mission section (placeholder for contact form)
+            // Прокрутка к секции about (или контактам)
             const contactSection = document.querySelector('.mission');
             if (contactSection) {
                 contactSection.scrollIntoView({ behavior: 'smooth' });
@@ -283,35 +283,51 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // FAQ Flip Cards
+    // FAQ карточки
     const faqItems = document.querySelectorAll('.faq-item');
 
     faqItems.forEach(item => {
         item.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
 
-            // Close all FAQ items
+            // Закрыть все FAQ элементы
             faqItems.forEach(faq => {
                 faq.classList.remove('active');
             });
 
-            // Toggle current item
+            // Открыть текущий
             if (!isActive) {
                 item.classList.add('active');
             }
         });
     });
 
-    // Contact Form Validation
+    // Функция построения сообщения для Telegram (по аналогии с шаблоном vlprime)
+    const buildTelegramMessage = (formData) => {
+        const lines = [`📩 *Новая заявка с сайта*`, ``];
+
+        if (formData.name) lines.push(`*Имя:* ${formData.name}`);
+        if (formData.phone) lines.push(`*Телефон:* ${formData.phone}`);
+        if (formData.projectType) lines.push(`*Тип проекта:* ${formData.projectType}`);
+        if (formData.message) lines.push(`*Сообщение:* ${formData.message}`);
+
+        lines.push(``);
+        lines.push(`Дата: ${new Date().toLocaleString('ru-RU')}`);
+
+        return lines.join('\n');
+    };
+
+    // Обработчик отправки формы
     const contactForm = document.getElementById('contactForm');
 
     if (contactForm) {
+        // ... (инициализация инпутов) ...
         const nameInput = document.getElementById('contactName');
         const phoneInput = document.getElementById('contactPhone');
         const projectTypeInput = document.getElementById('contactProjectType');
         const messageInput = document.getElementById('contactMessage');
 
-        // Phone mask
+        // Маска телефона
         phoneInput.addEventListener('input', (e) => {
             let value = e.target.value.replace(/\D/g, '');
 
@@ -338,7 +354,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Validation functions
+        // Функции валидации
         function showError(input, message) {
             const formGroup = input.parentElement;
             const errorSpan = formGroup.querySelector('.form-error');
@@ -404,13 +420,12 @@ document.addEventListener('DOMContentLoaded', () => {
             return true;
         }
 
-        // Real-time validation
+        // Переиспользуем существующие функции валидации
         nameInput.addEventListener('blur', validateName);
         phoneInput.addEventListener('blur', validatePhone);
         projectTypeInput.addEventListener('change', validateProjectType);
         messageInput.addEventListener('blur', validateMessage);
 
-        // Form submission
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
@@ -422,58 +437,50 @@ document.addEventListener('DOMContentLoaded', () => {
             if (isNameValid && isPhoneValid && isProjectTypeValid && isMessageValid) {
                 const submitBtn = contactForm.querySelector('.btn-submit');
                 const originalBtnText = submitBtn.innerHTML;
-                submitBtn.innerHTML = 'Отправка...';
+                submitBtn.innerHTML = 'Подготовка...';
                 submitBtn.disabled = true;
 
-                // Telegram Configuration
-                // TODO: Replace with your actual Bot Token and Chat ID
-                const BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE';
-                const CHAT_ID = 'YOUR_CHAT_ID_HERE';
-                const URI_API = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+                // Сбор данных формы
+                const formData = {
+                    name: nameInput.value,
+                    phone: phoneInput.value,
+                    projectType: projectTypeInput.value,
+                    message: messageInput.value
+                };
 
-                let message = `<b>Заявка с сайта</b>\n`;
-                message += `<b>Имя:</b> ${nameInput.value}\n`;
-                message += `<b>Телефон:</b> ${phoneInput.value}\n`;
-                message += `<b>Тип проекта:</b> ${projectTypeInput.value}\n`;
-                message += `<b>Сообщение:</b> ${messageInput.value}`;
+                // Генерация сообщения
+                const messageText = buildTelegramMessage(formData);
+                const targetPhone = '79266262662';
 
+                // 1. Копирование в буфер обмена (надежный способ передачи текста)
                 try {
-                    const response = await fetch(URI_API, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            chat_id: CHAT_ID,
-                            text: message,
-                            parse_mode: 'html'
-                        })
-                    });
-
-                    const result = await response.json();
-
-                    if (result.ok) {
-                        alert('Спасибо за заявку! Мы свяжемся с вами в ближайшее время.');
-                        contactForm.reset();
-                        [nameInput, phoneInput, projectTypeInput, messageInput].forEach(input => {
-                            clearError(input);
-                        });
-                    } else {
-                        throw new Error('Telegram API Error');
-                    }
-                } catch (error) {
-                    console.error('Error:', error);
-                    alert('Ошибка отправки. Пожалуйста, свяжитесь с нами другим способом.');
-                } finally {
-                    submitBtn.innerHTML = originalBtnText;
-                    submitBtn.disabled = false;
+                    await navigator.clipboard.writeText(messageText);
+                    alert('Сообщение скопировано! Переходим в Telegram...');
+                } catch (err) {
+                    console.error('Ошибка буфера:', err);
+                    alert('Переходим в Telegram...');
                 }
+
+                // 2. Открытие чата
+                // Формат ссылки для открытия чата с пользователем
+                const telegramUrl = `https://t.me/+${targetPhone}`;
+
+                window.open(telegramUrl, '_blank', 'noopener,noreferrer');
+
+                // Сброс формы
+                contactForm.reset();
+                [nameInput, phoneInput, projectTypeInput, messageInput].forEach(input => {
+                    clearError(input);
+                });
+
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
             }
         });
     }
 });
 
-// Active navigation on scroll
+// Активная навигация при прокрутке
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav a');
 
@@ -494,10 +501,7 @@ sections.forEach(section => {
     navObserver.observe(section);
 });
 
-
-
-
-// Burger Menu functionality
+// Функционал бургер-меню
 const burgerBtn = document.querySelector('.burger-btn');
 const nav = document.querySelector('.nav');
 
@@ -508,7 +512,7 @@ if (burgerBtn && nav) {
         document.body.classList.toggle('no-scroll');
     });
 
-    // Close menu when a link is clicked
+    // Закрытие меню при клике на ссылку
     const navLinks = nav.querySelectorAll('a');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -518,7 +522,7 @@ if (burgerBtn && nav) {
         });
     });
 
-    // Close menu when clicking outside (or on the overlay itself)
+    // Закрытие меню при клике вне его
     document.addEventListener('click', (e) => {
         const isClickInsideMenu = nav.contains(e.target) && e.target !== nav;
         const isClickOnBurger = burgerBtn.contains(e.target);
@@ -531,7 +535,7 @@ if (burgerBtn && nav) {
     });
 }
 
-// Scroll Animation Observer for generic fade-up
+// Наблюдатель анимации прокрутки (fade-up)
 const fadeObserverOptions = {
     threshold: 0.1,
     rootMargin: "0px 0px -50px 0px"
@@ -541,24 +545,22 @@ const fadeObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            observer.unobserve(entry.target); // Only animate once
+            observer.unobserve(entry.target); // Анимировать только один раз
         }
     });
 }, fadeObserverOptions);
 
-// Target elements to animate
+// Элементы для анимации
 const elementsToAnimate = document.querySelectorAll(
     '.section-title, .section-label, .service-item, .bento-item, .portfolio-item, .process-header'
 );
 
 elementsToAnimate.forEach((el, index) => {
     el.classList.add('fade-up');
-    // Optional: Add staggering based on index or position? 
-    // Usually manual staggering is better, but let's just observe.
     fadeObserver.observe(el);
 });
 
-// Scroll Navigation Logic
+// Логика кнопок прокрутки
 document.addEventListener('DOMContentLoaded', () => {
     const scrollTopBtn = document.getElementById('scrollTop');
     const scrollBottomBtn = document.getElementById('scrollBottom');
